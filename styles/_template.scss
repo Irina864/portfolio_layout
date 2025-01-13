@@ -1,0 +1,96 @@
+@import './variables';
+
+@mixin flex($fd, $jc, $ai) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin font($fs, $fw, $lh) {
+  font-family: $font;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin _screenMobile {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+%subtitleFont {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  overflow-x: hidden;
+  font-family: $font;
+  color: $colorText;
+  background-color: $backgroundMain;
+}
+
+.subtitle {
+  position: relative;
+  .subtitle__circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $colorCircle;
+  }
+  .subtitle__text {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    @extend %subtitleFont;
+  }
+}
+
+.title {
+  @include flex(column, center, center);
+  .title__text {
+    font-family: $font;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: left;
+    @include _screenMobile {
+      margin-top: 20px;
+      font-size: 24px;
+      line-height: 36px;
+      text-align: center;
+    }
+  }
+  .title__line {
+    width: 60px;
+    height: 3px;
+    background-color: $colorLightLine;
+  }
+}
+.error {
+  font-family: $font;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: left;
+  color: $colorError;
+}
+
+.error-border {
+  border-color: $colorError;
+}

@@ -1,0 +1,77 @@
+@import './template';
+@import './variables';
+
+.overlay {
+  display: none;
+}
+
+.overlay_active {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  @include flex(row, flex-start, flex-start);
+  background-color: $backgroundOverlay;
+  z-index: 5;
+  .close {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.menu {
+  height: 100%;
+  width: 100%;
+  max-width: 345px;
+  background-color: $backgroundMenu;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include _screenMobile {
+    min-width: 250px;
+    width: 100%;
+  }
+  .cross {
+    margin-top: 24px;
+    margin-right: 25px;
+    @include flex(row, flex-end, flex-start);
+    cursor: pointer;
+  }
+  .nav {
+    margin-bottom: 59%;
+    margin-left: 40px;
+    @include flex(column, flex-start, flex-start);
+    gap: 15px;
+    @include _screenMobile {
+      margin-left: 20px;
+    }
+    .nav__item {
+      @include flex(row, flex-start, center);
+      gap: 20px;
+    }
+    .nav__circle {
+      width: 15px;
+      height: 15px;
+      border: 1px solid;
+      border-radius: 50%;
+    }
+    .nav__link {
+      font-family: $font;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+      text-align: left;
+      text-decoration: none;
+      color: $colorTextMenu;
+      cursor: pointer;
+    }
+  }
+  .nav-social-icons {
+    margin-bottom: 50px;
+    @include flex(row, center, center);
+    gap: 15px;
+    .nav-social-icons__link {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Тестовое React Песляк Ирина</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="overlay">
+        <div class="menu">
+          <div class="cross">
+            <img
+              class="cross__image"
+              src="./assets/images/introduction/сlose.svg"
+              alt="сlose"
+            />
+          </div>
+          <nav class="nav">
+            <div class="nav__item">
+              <div class="nav__circle"></div>
+              <a class="nav__link" href="#aboutme">ПРО МЕНЯ</a>
+            </div>
+            <div class="nav__item">
+              <div class="nav__circle"></div>
+              <a class="nav__link" href="#experience">МОЙ ОПЫТ</a>
+            </div>
+            <div class="nav__item">
+              <div class="nav__circle"></div>
+              <a class="nav__link" href="#skills">МОИ НАВЫКИ</a>
+            </div>
+            <div class="nav__item">
+              <div class="nav__circle"></div>
+              <a class="nav__link" href="#projects">МОИ РАБОТЫ</a>
+            </div>
+            <div class="nav__item">
+              <div class="nav__circle"></div>
+              <a class="nav__link" href="#price">ПРАЙС-ЛИСТ</a>
+            </div>
+            <div class="nav__item">
+              <div class="nav__circle"></div>
+              <a class="nav__link" href="#contacts">КОНТАКТЫ</a>
+            </div>
+          </nav>
+          <div class="nav-social-icons">
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-social-icons__link"
+            >
+              <img
+                src="./assets/images/introduction/github.svg"
+                alt="github"
+                class="nav-social-icons__image"
+            /></a>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-social-icons__link"
+            >
+              <img
+                src="./assets/images/introduction/instagram.svg"
+                alt="instagram"
+                class="nav-social-icons__image"
+            /></a>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-social-icons__link"
+            >
+              <img
+                src="./assets/images/introduction/facebook.svg"
+                alt="facebook"
+                class="nav-social-icons__image"
+            /></a>
+          </div>
+        </div>
+        <div class="close"></div>
+      </div>
+      <section class="introduction">
+        <aside class="social">
+          <h2 class="social__title">Социальные сети</h2>
+          <div class="social__line"></div>
+          <div class="social-icons">
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icons__link"
+            >
+              <img
+                src="./assets/images/introduction/github.svg"
+                alt="github"
+                class="social-icons__image"
+            /></a>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icons__link"
+            >
+              <img
+                src="./assets/images/introduction/instagram.svg"
+                alt="instagram"
+                class="social-icons__image"
+            /></a>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icons__link"
+            >
+              <img
+                src="./assets/images/introduction/facebook.svg"
+                alt="facebook"
+                class="social-icons__image"
+            /></a>
+          </div>
+        </aside>
+        <div class="promo">
+          <div class="subtitle">
+            <div class="subtitle__circle"></div>
+            <div class="subtitle__text">Меня зовут Александра Смит</div>
+          </div>
+          <h1 class="promo__title">Я web-разработчик из города Москва</h1>
+          <div class="promo__links">
+            <a href="#portfolio" class="promo__link">Портфолио</a>
+            <a href="#aboutme" class="promo__link">Про меня</a>
+          </div>
+        </div>
+        <div class="menu-burger">
+          <div class="menu-burger__item"></div>
+          <div class="menu-burger__item"></div>
+          <div class="menu-burger__item"></div>
+        </div>
+      </section>
+      <section class="resume" id="experience">
+        <div class="title">
+          <div class="subtitle">
+            <div class="subtitle__circle"></div>
+            <div class="subtitle__text">Опыт</div>
+          </div>
+          <h2 class="title__text">Чем я буду полезна</h2>
+          <div class="title__line"></div>
+        </div>
+        <div class="resume__benefits">
+          <article class="benefit benefit_education">
+            <div class="benefit__circle"></div>
+            <h3 class="benefit__title">Образование</h3>
+            <div class="benefit__item">
+              <div class="benefit__header">
+                <div class="icon">
+                  <img
+                    class="icon__image"
+                    src="./assets/images/resume/university.svg"
+                    alt="university"
+                  />
+                  <div class="icon__line"></div>
+                  <div class="icon__circle"></div>
+                </div>
+                <div class="box">
+                  <div class="box__title">МГТУ им. Н. Э. Баумана</div>
+                  <div class="box__subtitle">
+                    Диплом магистра | Москва (2014-2020)
+                  </div>
+                </div>
+              </div>
+              <div class="benefit__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmo.
+              </div>
+            </div>
+            <div class="benefit__item">
+              <div class="benefit__header">
+                <div class="icon">
+                  <img
+                    class="icon__image"
+                    src="./assets/images/resume/courses.svg"
+                    alt="courses"
+                  />
+                  <div class="icon__line"></div>
+                  <div class="icon__circle"></div>
+                </div>
+                <div class="box">
+                  <div class="box__title">Udemy</div>
+                  <div class="box__subtitle">Курсы по Web-разработке</div>
+                </div>
+              </div>
+              <div class="benefit__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmo.
+              </div>
+            </div>
+          </article>
+          <article class="benefit benefit_experience">
+            <div class="benefit__circle"></div>
+            <h3 class="benefit__title">Опыт работы</h3>
+            <div class="benefit__item">
+              <div class="benefit__header">
+                <div class="icon">
+                  <img
+                    class="icon__image"
+                    src="./assets/images/resume/developer.svg"
+                    alt="developer"
+                  />
+                  <div class="icon__line"></div>
+                  <div class="icon__circle"></div>
+                </div>
+                <div class="box">
+                  <div class="box__title">Front-End Developer</div>
+                  <div class="box__subtitle">
+                    <div class="box__item">EPAM | Москва (2018-2019)</div>
+                  </div>
+                </div>
+              </div>
+              <div class="benefit__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmo.
+              </div>
+            </div>
+            <div class="benefit__item">
+              <div class="benefit__header">
+                <div class="icon">
+                  <img
+                    class="icon__image"
+                    src="./assets/images/resume/designer.svg"
+                    alt="designer"
+                  />
+                  <div class="icon__line"></div>
+                  <div class="icon__circle"></div>
+                </div>
+                <div class="box">
+                  <div class="box__title">UI/UX Designer</div>
+                  <div class="box__subtitle">
+                    <div class="box__item">Squad Team | Москва (2018)</div>
+                  </div>
+                </div>
+              </div>
+              <div class="benefit__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmo.
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="contacts" id="contacts">
+        <img
+          class="contacts__image"
+          src="./assets/images/contacts/photo.png"
+          alt="photo"
+        />
+        <div class="contacts__form">
+          <div class="title">
+            <div class="subtitle">
+              <div class="subtitle__circle"></div>
+              <div class="subtitle__text">Контакты</div>
+            </div>
+            <h2 class="title__text">Свяжитесь со мной</h2>
+            <div class="title__line"></div>
+          </div>
+          <p class="contacts__form-text">Любым удобным для вас способом:</p>
+          <div class="icons">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="icons__link"
+            >
+              <img
+                src="./assets/images/contacts/facebook.svg"
+                alt="facebook"
+                class="icons__image"
+            /></a>
+            <a
+              href="https://web.telegram.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="icons__link"
+            >
+              <img
+                src="./assets/images/contacts/telegram.svg"
+                alt="telegram"
+                class="icons__image"
+            /></a>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="icons__link"
+            >
+              <img
+                src="./assets/images/contacts/instagram.svg"
+                alt="instagram"
+                class="icons__image"
+            /></a>
+          </div>
+          <p class="contacts__form-text">
+            Или оставьте ваши данные и я сама вам напишу:
+          </p>
+          <form class="form" name="form" novalidate>
+            <div class="form__item">
+              <fieldset class="form__fieldset">
+                <legend class="form__legend">Ваше имя</legend>
+                <input
+                  name="sender"
+                  class="form__input"
+                  type="text"
+                  placeholder="Иван"
+                  minlength="2"
+                  maxlength="30"
+                  required
+                />
+              </fieldset>
+            </div>
+            <div class="form__item">
+              <fieldset class="form__fieldset">
+                <legend class="form__legend">Ваша почта</legend>
+                <input
+                  name="email"
+                  class="form__input"
+                  type="email"
+                  minlength="2"
+                  maxlength="63"
+                  pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,63}"
+                  required
+                />
+              </fieldset>
+            </div>
+            <div class="form__item">
+              <fieldset class="form__fieldset">
+                <legend class="form__legend">Ваше сообщение</legend>
+                <textarea
+                  name="text"
+                  class="form__textarea"
+                  minlength="20"
+                  maxlength="1000"
+                  required
+                ></textarea>
+              </fieldset>
+            </div>
+            <div class="agreement">
+              <input
+                name="agreementCheckbox"
+                class="agreement__checkbox"
+                type="checkbox"
+                required
+              />
+              <div class="agreement__text">
+                Я согласен(а) с
+                <a class="agreement__link" href="#"
+                  >политикой конфиденциальности</a
+                >
+              </div>
+            </div>
+            <button name="submitButton" type="submit" class="form__submit">
+              Отправить сообщение
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/submit.js"></script>
+  </body>
+</html>

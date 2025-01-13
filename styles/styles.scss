@@ -1,0 +1,435 @@
+@import './template';
+@import './variables';
+@import './menu';
+
+.introduction {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  height: 800px;
+  @include flex(row, center, center);
+  background: url('../assets/images/introduction/background.png') no-repeat
+    center top;
+  @include _screenMobile {
+    padding: 0 10px;
+    height: 640px;
+    background: url('../assets/images/introduction/background-mobile.png');
+  }
+  .social {
+    position: absolute;
+    top: 564px;
+    left: 50px;
+    width: fit-content;
+    height: fit-content;
+    margin: auto 0;
+    @include flex(row, center, center);
+    gap: 15px;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    @include _screenMobile {
+      display: none;
+    }
+    .social__line {
+      height: 2px;
+      width: 70px;
+      background-color: $colorDarkLine;
+    }
+    .social-icons {
+      @include flex(row, center, center);
+      gap: 15px;
+      a {
+        @include flex(row, center, center);
+      }
+    }
+    .social__title {
+      @extend %subtitleFont;
+    }
+  }
+  .promo {
+    padding-top: 200px;
+    width: 100%;
+    height: 100%;
+    max-width: 1140px;
+    border: 1px solid $colorDarkLine;
+    border-bottom: none;
+    @include _screenMobile {
+      border: none;
+    }
+    .promo__title {
+      margin: 3px 0 35px 0;
+      max-width: 532px;
+      font-family: $font;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 60px;
+      text-align: left;
+      @include _screenMobile {
+        margin-bottom: 32px;
+        padding-right: 20px;
+        font-size: 26px;
+        line-height: 39px;
+      }
+    }
+    .promo__links {
+      @include flex(row, flex-start, center);
+      gap: 9px;
+    }
+    .promo__link {
+      min-width: 135px;
+      padding: 12px 25px;
+      font-family: $font;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      text-align: center;
+      text-decoration: none;
+      color: $colorDarkLink;
+      cursor: pointer;
+    }
+    .promo__link:first-child {
+      background-color: $colorButton;
+      box-shadow: 0px 4px 4px 0px #00000026;
+    }
+  }
+  .menu-burger {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    @include flex(column, flex-start, flex-end);
+    gap: 6px;
+    cursor: pointer;
+    @include _screenMobile {
+      right: 20px;
+    }
+    .menu-burger__item {
+      height: 3px;
+      width: 30px;
+      background-color: $colorBurgerMenu;
+    }
+    .menu-burger__item:nth-child(2) {
+      width: 36px;
+    }
+  }
+}
+
+.resume {
+  margin: 0 auto;
+  padding: 120px 0;
+  width: 100%;
+  height: 100%;
+  max-width: 1140px;
+  border-left: 1px solid $colorDarkLine;
+  border-right: 1px solid $colorDarkLine;
+  @include flex(column, center, center);
+  gap: 72px;
+  @include _screenMobile {
+    border: none;
+    padding: 40px 10px 40px 15px;
+    gap: 52px;
+  }
+  .subtitle__text {
+    left: -5px;
+  }
+  .title__line {
+    margin-top: 25px;
+    @include _screenMobile {
+      margin-top: 15px;
+    }
+  }
+  .resume__benefits {
+    width: 100%;
+    max-width: 986px;
+    @include flex(row, flex-start, flex-start);
+    gap: 14%;
+    flex-wrap: wrap;
+    @include _screenMobile {
+      gap: 60px;
+    }
+  }
+  .benefit {
+    position: relative;
+    padding-top: 57px;
+    max-width: 425px;
+    @include flex(column, flex-start, flex-start);
+    gap: 45px;
+    border-left: 1px solid $colorDarkLine;
+    @include _screenMobile {
+      padding-top: 59px;
+      gap: 12.5px;
+    }
+    .benefit__circle {
+      position: absolute;
+      top: -7.5px;
+      left: -8px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $colorCircle;
+    }
+    .benefit__title {
+      position: absolute;
+      top: -15px;
+      left: 42px;
+      font-family: $font;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 30px;
+      text-align: left;
+    }
+  }
+  .benefit__item {
+    padding-left: 42px;
+    max-width: 417px;
+    @include flex(column, flex-start, flex-start);
+    gap: 12px;
+    @include _screenMobile {
+      gap: 5px;
+    }
+    .benefit__header {
+      @include flex(row, flex-start, flex-start);
+      gap: 20px;
+      @include _screenMobile {
+        max-width: 235px;
+      }
+    }
+    .benefit__text {
+      max-width: 375px;
+      min-height: 78px;
+      font-family: $font;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      text-align: left;
+    }
+  }
+  .icon {
+    position: relative;
+    .icon__line {
+      position: absolute;
+      top: 50%;
+      left: -42px;
+      width: 42px;
+      height: 1px;
+      background-color: $colorDarkLine;
+    }
+    .icon__circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: $colorCircle;
+    }
+    .icon__image {
+      position: absolute;
+      top: 15px;
+      left: 17px;
+    }
+  }
+  .box {
+    @include flex(column, flex-start, flex-start);
+    .box__title {
+      font-family: $font;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      text-align: left;
+    }
+    .box__subtitle {
+      font-family: $font;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      text-align: left;
+      @include _screenMobile {
+        min-height: 32.5px;
+      }
+    }
+  }
+}
+
+.contacts {
+  padding-bottom: 91px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  max-width: 1140px;
+  border: 1px solid $colorDarkLine;
+  border-top: none;
+  @include flex(row, flex-end, flex-start);
+  gap: 68px;
+  @include _screenMobile {
+    border: none;
+    padding: 0 10px 50px 10px;
+    .contacts__image {
+      display: none;
+    }
+  }
+  .contacts__form {
+    margin-right: 35px;
+    width: 100%;
+    max-width: 585px;
+    @include flex(column, flex-start, flex-start);
+    gap: 20px;
+    @include _screenMobile {
+      margin-right: 0;
+    }
+    .title {
+      @include flex(column, flex-start, flex-start);
+    }
+    .title__text {
+      @include _screenMobile {
+        margin: 20px 0 15px 0;
+      }
+    }
+    .contacts__form-text {
+      font-family: $font;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      text-align: left;
+    }
+    .icons {
+      max-height: 30px;
+      @include flex(row, flex-start, center);
+      gap: 25px;
+    }
+    .icon__link {
+      cursor: pointer;
+    }
+  }
+  .form {
+    width: 100%;
+    display: grid;
+    grid-template: minmax(54px, 60px) minmax(199px, 210px) 45px / repeat(2, 1fr);
+    row-gap: 21px;
+    column-gap: 25px;
+    @include _screenMobile {
+      @include flex(column, flex-start, center);
+      gap: 20px;
+    }
+    .form__item {
+      width: 100%;
+      height: 54px;
+    }
+    .form__item:nth-child(3) {
+      grid-area: 2/1/3/3;
+      min-height: 190px;
+      @include _screenMobile {
+        min-height: 150px;
+      }
+    }
+    .form__fieldset {
+      padding: 0 20px;
+      width: 100%;
+      height: 100%;
+      min-height: 54px;
+      border: 1px solid $colorDarkLine;
+    }
+    .form__fieldset:nth-child(3) {
+      min-height: 190px;
+      overflow-y: auto;
+      @include _screenMobile {
+        min-height: 150px;
+      }
+    }
+    .error-border {
+      border-color: $colorError;
+    }
+
+    .form__legend {
+      padding: 0 8px;
+      font-family: $font;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      text-align: left;
+    }
+    .form__input,
+    .form__textarea {
+      width: 100%;
+      min-height: 95%;
+      border: none;
+      outline: none;
+      font-family: $font;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      text-align: left;
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+    .form__textarea {
+      resize: none;
+      @include _screenMobile {
+        min-height: 120px;
+      }
+    }
+    .form__submit {
+      grid-area: 3/1/4/2;
+      padding: 12px 26px;
+      width: 219px;
+      height: 45px;
+      border: none;
+      font-family: $font;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      text-align: center;
+      text-decoration: none;
+      color: $colorDarkLink;
+      background-color: $colorButton;
+      box-shadow: 0px 4px 4px 0px #00000026;
+      cursor: pointer;
+      &:disabled {
+        background-color: $colorButtonDisabled;
+      }
+    }
+  }
+  .agreement {
+    display: none;
+    max-width: 180px;
+    font-family: $font;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    @include _screenMobile {
+      @include flex(row, center, center);
+      gap: 10px;
+    }
+    .agreement__checkbox {
+      min-width: 11px;
+      height: 11px;
+      border-radius: 0;
+      border: 1px solid $colorDarkLine;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      cursor: pointer;
+    }
+    .agreement__checkbox:checked {
+      background-color: $colorDarkLine;
+      position: relative;
+    }
+
+    .agreement__checkbox:checked::after {
+      content: '✓';
+      position: absolute;
+      color: $colorLightLine;
+      font-size: 8px;
+      left: 2px;
+      top: -2;
+    }
+    .agreement__link {
+      color: $colorLightLink;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1275px) {
+  .introduction .social {
+    display: none;
+  }
+}
